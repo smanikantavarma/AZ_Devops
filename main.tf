@@ -9,6 +9,16 @@ terraform {
   }
 }
 
+terraform {
+  backend "azurerm" {
+    resource_group_name = "Devops-B27"
+    storage_account_name = "devopsb27terraformprodu"
+    container_name  = "tfstate"
+    key = "devopsb27-git-class.tfstate"
+    access_key = "KFTC3rbIw7nkpnE6+ae+y9s4qv+nNMAJoDTj8bNPLFMvWVqAtq+x132ruaodWEBZdSJIRzLT43Ob+ASt/F7kCg=="
+  }
+}
+
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
   subscription_id = "df387313-b5f2-429f-8227-e142fc8c6b7b"
